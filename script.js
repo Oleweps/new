@@ -1,15 +1,13 @@
-document.addEventListener("DOMContentLoaded", function() {
+$(document).ready(function() {
     $('#menu').click(function() {
         $(this).toggleClass('fa-times');
         $('header').toggleClass('toggle');
     });
 
-    $('.navbar ul li a').click(function() {
+    $(window).on('scroll load', function() {
         $('#menu').removeClass('fa-times');
         $('header').removeClass('toggle');
-    });
 
-    $(window).on('scroll', function() {
         if ($(window).scrollTop() > 0) {
             $('.top').show();
         } else {
@@ -17,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-/* scrolling smoothly */    
+    // Smooth scrolling
     $('a[href*="#"]').on('click', function(e) {
         e.preventDefault();
         $('html, body').animate({
@@ -25,3 +23,4 @@ document.addEventListener("DOMContentLoaded", function() {
         }, 500, 'linear');
     });
 });
+

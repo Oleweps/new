@@ -114,7 +114,7 @@ header .navbar ul li a:hover {
     display: flex;
     justify-content: center;
     flex-flow: column;
-    padding: 0 .15rem;
+    padding: 0 15rem;
 
 }
 .home h3 {
@@ -208,6 +208,10 @@ section {
     font-size: 4rem;
     color: var(--yellow);
 }
+.about .counter .box h3 {
+    font-size: 1.75rem;
+    color: #000;
+}
 
 .education .box-container {
     display: flex;
@@ -276,8 +280,13 @@ section {
     width: 100%;
     object-fit: cover;
 }
+.portfolio-item img {
+    transform: 750ms cubic-bezier(.5, 0, .5, 1);
+    opacity: 250ms linear;
+}
 .portfolio .box-container .box:hover img {
     transform: scale(1.2);
+    opacity: .5;
 }
 
 .contact .row {
@@ -325,6 +334,9 @@ section {
     padding: 1rem 0;
     font-weight: normal;
 
+}
+#contact .info span i {
+    color: var(--yellow);
 }
 .contact .row form .box::placeholder {
     text-transform: capitalize;
